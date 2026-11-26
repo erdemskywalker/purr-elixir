@@ -1,0 +1,115 @@
+{
+  "appName": "Purr Elixir",
+  "bundleId": "com.erdem.purrelixir",
+  "accent": "#7C3AED",
+  "bgStart": "#3B1B7A",
+  "bgEnd": "#7C3AED",
+  "languages": ["en", "tr"],
+  "slides": [
+    {
+      "id": "hero-gameplay",
+      "bgStart": "#3A1678",
+      "bgEnd": "#8B5CF6",
+      "badge": {
+        "en": "CRYSTAL CAT POTION SORT",
+        "tr": "KRİSTAL KEDİ İKSİR SIRALAMA"
+      },
+      "headline": {
+        "en": "Pour, Seal &\nPurr-fect Combos",
+        "tr": "Dök, Mühürle &\nKombo Yakala"
+      },
+      "subheadline": {
+        "en": "Sort luminous potions into pure vials and pop cute cat-ear corks with live talking cats.",
+        "tr": "Parlayan iksirleri saf şişelerde topla, kedi kulaklı tıpaları patlat ve canlı tepkileri izle."
+      },
+      "sourcePng": {
+        "en": "artifacts/screenshots/store_01_hero_en.png",
+        "tr": "artifacts/screenshots/store_01_hero_tr.png"
+      }
+    },
+    {
+      "id": "pouring-smart-hint",
+      "bgStart": "#0F4C5C",
+      "bgEnd": "#0D9488",
+      "badge": {
+        "en": "SMOOTH PHYSICS & HINTS",
+        "tr": "AKICI FİZİK & AKILLI İPUCU"
+      },
+      "headline": {
+        "en": "Silky Pours.\nSmart Guidance.",
+        "tr": "İpek Gibi Akış.\nAkıllı İpucu."
+      },
+      "subheadline": {
+        "en": "Every shelf is 100% solvable with unlimited Undo, glowing Smart Hints, and +1 Empty Flask.",
+        "tr": "Her raf %100 çözülebilir; sınırsız Geri Al, parlayan Akıllı İpucu ve +1 Boş Şişe hep yanında."
+      },
+      "sourcePng": {
+        "en": "artifacts/screenshots/store_02_pour_hint_en.png",
+        "tr": "artifacts/screenshots/store_02_pour_hint_tr.png"
+      }
+    },
+    {
+      "id": "sunlit-shop-home",
+      "bgStart": "#4C1D95",
+      "bgEnd": "#A855F7",
+      "badge": {
+        "en": "SUNLIT LAVENDER APOTHECARY",
+        "tr": "AYDINLIK LAVANTA ATÖLYESİ"
+      },
+      "headline": {
+        "en": "Cozy Workshop,\nDaily Brew Streaks",
+        "tr": "Sıcak Atölye,\nGünlük Seri"
+      },
+      "subheadline": {
+        "en": "Track stars, solve 60-day Daily Special Orders, and chat with your active feline assistant.",
+        "tr": "Yıldız topla, 60 farklı Günlük Siparişi çöz ve aktif kedi asistanınla sohbet et."
+      },
+      "sourcePng": {
+        "en": "artifacts/screenshots/store_03_home_en.png",
+        "tr": "artifacts/screenshots/store_03_home_tr.png"
+      }
+    },
+    {
+      "id": "levels-endless",
+      "bgStart": "#4C1D95",
+      "bgEnd": "#DB2777",
+      "badge": {
+        "en": "60 LEVELS + ENDLESS ALCHEMY",
+        "tr": "60 BÖLÜM + SONSUZ SİMYA"
+      },
+      "headline": {
+        "en": "From 3 Colors\nto Grandmaster",
+        "tr": "3 Renkten\nBüyük Ustaya"
+      },
+      "subheadline": {
+        "en": "Master 60 handcrafted shelves or generate fresh Endless Alchemy puzzles anytime offline.",
+        "tr": "60 özenli bölümde ustalaş veya cihazında internetsiz taze Sonsuz Simya rafları üret."
+      },
+      "sourcePng": {
+        "en": "artifacts/screenshots/store_04_levels_en.png",
+        "tr": "artifacts/screenshots/store_04_levels_tr.png"
+      }
+    },
+    {
+      "id": "cats-dark-mode",
+      "bgStart": "#151126",
+      "bgEnd": "#5B21B6",
+      "badge": {
+        "en": "6 CATS & TWILIGHT DARK MODE",
+        "tr": "6 KEDİ & KOYU MOD"
+      },
+      "headline": {
+        "en": "Unlock 6 Cats.\nPlay Offline.",
+        "tr": "6 Kediyi Aç.\nİnternetsiz Oyna."
+      },
+      "subheadline": {
+        "en": "Switch assistants, enjoy Light & Dark themes, Colorblind Symbols, and private local stats.",
+        "tr": "Asistanını seç; Açık/Koyu tema, Renk Körlüğü Sembolleri ve yerel istatistiklerle oyna."
+      },
+      "sourcePng": {
+        "en": "artifacts/screenshots/store_05_cats_dark_en.png",
+        "tr": "artifacts/screenshots/store_05_cats_dark_tr.png"
+      }
+    }
+  ]
+}

@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Purr Elixir — Support &amp; FAQ / Destek ve SSS</title>
+  <meta name="description" content="Official Support & FAQ page for Purr Elixir: Cat Potion Sort (com.erdem.purrelixir). Help with gameplay, unlocking cats, colorblind symbols, offline saves, and contacting support." />
+  <style>
+    :root {
+      --bg-top: #f3eeff;
+      --bg-bottom: #ecf6ff;
+      --surface: #ffffff;
+      --surface-soft: #f7f3ff;
+      --ink: #1e1633;
+      --ink-muted: #5b5175;
+      --accent: #7c3aed;
+      --accent-dark: #5b21b6;
+      --accent-soft: #ede9fe;
+      --mint: #0d9488;
+      --mint-soft: #ccfbf1;
+      --border: #ddd4f4;
+      --shadow: 0 12px 32px rgba(91, 33, 182, 0.09);
+      --lip: 0 4px 0 #ddd4f4;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg-top: #151126;
+        --bg-bottom: #1a1533;
+        --surface: #211b3a;
+        --surface-soft: #2a224a;
+        --ink: #f5f2ff;
+        --ink-muted: #bfb5de;
+        --accent: #a78bfa;
+        --accent-dark: #c4b5fd;
+        --accent-soft: rgba(167, 139, 250, 0.16);
+        --mint: #2dd4bf;
+        --mint-soft: rgba(45, 212, 191, 0.14);
+        --border: #362d5e;
+        --shadow: 0 14px 36px rgba(0, 0, 0, 0.42);
+        --lip: 0 4px 0 #120d22;
+      }
+    }
+
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: ui-rounded, "SF Pro Rounded", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: linear-gradient(180deg, var(--bg-top) 0%, var(--bg-bottom) 100%);
+      color: var(--ink);
+      line-height: 1.65;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wrap {
+      max-width: 840px;
+      margin: 0 auto;
+      padding: 28px 18px 72px;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--ink);
+    }
+
+    .brand-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: linear-gradient(145deg, #a78bfa, #7c3aed);
+      display: grid;
+      place-items: center;
+      box-shadow: 0 6px 16px rgba(124, 58, 237, 0.28);
+      flex-shrink: 0;
+    }
+
+    .brand-title {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+    }
+
+    .brand-sub {
+      font-size: 13px;
+      color: var(--ink-muted);
+      font-weight: 600;
+    }
+
+    .lang-toggle {
+      display: inline-flex;
+      background: var(--surface);
+      border: 1.5px solid var(--border);
+      border-radius: 999px;
+      padding: 4px;
+      gap: 4px;
+      box-shadow: var(--lip);
+    }
+
+    .lang-btn {
+      border: 0;
+      background: transparent;
+      color: var(--ink-muted);
+      font-family: inherit;
+      font-size: 13.5px;
+      font-weight: 700;
+      padding: 7px 16px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: background 0.18s ease, color 0.18s ease;
+    }
+
+    .lang-btn.is-active {
+      background: var(--accent);
+      color: #ffffff;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .lang-btn.is-active { color: #151126; }
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #6d28d9 0%, #7c3aed 55%, #0d9488 100%);
+      color: #ffffff;
+      border-radius: 26px;
+      padding: 30px 26px;
+      box-shadow: 0 18px 40px rgba(109, 40, 217, 0.28);
+      margin-bottom: 22px;
+    }
+
+    .hero-kicker {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.18);
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+
+    .hero h1 {
+      margin: 0 0 10px;
+      font-size: clamp(26px, 4vw, 34px);
+      line-height: 1.15;
+      letter-spacing: -0.025em;
+    }
+
+    .hero p {
+      margin: 0 0 20px;
+      color: rgba(255, 255, 255, 0.9);
+      max-width: 600px;
+    }
+
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #ffffff;
+      color: #5b21b6;
+      font-weight: 800;
+      font-size: 15px;
+      padding: 12px 22px;
+      border-radius: 14px;
+      text-decoration: none;
+      box-shadow: 0 4px 0 rgba(30, 22, 51, 0.25);
+      transition: transform 0.12s ease;
+    }
+
+    .cta-btn:hover { transform: translateY(-1px); text-decoration: none; }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1.5px solid var(--border);
+      border-radius: 22px;
+      padding: 22px 24px;
+      box-shadow: var(--shadow);
+      margin-bottom: 16px;
+    }
+
+    .grid-2 .card { margin-bottom: 0; }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 19px;
+      letter-spacing: -0.015em;
+    }
+
+    h3 {
+      margin: 0 0 6px;
+      font-size: 16px;
+    }
+
+    p { margin: 0 0 10px; color: var(--ink-muted); }
+    p:last-child { margin-bottom: 0; }
+    strong { color: var(--ink); }
+
+    .cat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .cat-item {
+      background: var(--surface-soft);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 12px 14px;
+    }
+
+    .cat-name {
+      font-weight: 800;
+      font-size: 15px;
+      color: var(--ink);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 3px;
+    }
+
+    .cat-badge {
+      font-size: 11.5px;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent-dark);
+    }
+
+    .cat-meta {
+      font-size: 13px;
+      color: var(--ink-muted);
+    }
+
+    details {
+      border: 1px solid var(--border);
+      background: var(--surface-soft);
+      border-radius: 14px;
+      padding: 13px 16px;
+      margin-bottom: 10px;
+    }
+
+    details:last-child { margin-bottom: 0; }
+
+    summary {
+      font-weight: 800;
+      font-size: 15px;
+      color: var(--ink);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+    summary::-webkit-details-marker { display: none; }
+    summary::after {
+      content: "+";
+      font-size: 18px;
+      color: var(--accent);
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+    details[open] summary::after { content: "−"; }
+    details p { margin-top: 10px; font-size: 14.5px; }
+
+    a {
+      color: var(--accent);
+      font-weight: 700;
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
+
+    .footer {
+      text-align: center;
+      margin-top: 28px;
+      font-size: 13.5px;
+      color: var(--ink-muted);
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+
+    [hidden] { display: none !important; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 36 36" fill="none">
+            <path d="M12 10L10.5 4.5L15.5 7.5H20.5L25.5 4.5L24 10H12Z" fill="#FDE68A" stroke="#FFFFFF" stroke-width="1.6" stroke-linejoin="round"/>
+            <rect x="11" y="10" width="14" height="3.2" rx="1.6" fill="#FFFFFF"/>
+            <path d="M13 13.2H23L26.5 24.5C27.5 27.8 25.1 31 21.7 31H14.3C10.9 31 8.5 27.8 9.5 24.5L13 13.2Z" fill="rgba(255,255,255,0.28)" stroke="#FFFFFF" stroke-width="1.8"/>
+            <path d="M11.6 22.8H24.4L25.4 25.8C26 27.8 24.5 29.6 22.4 29.6H13.6C11.5 29.6 10 27.8 10.6 25.8L11.6 22.8Z" fill="#5EEAD4"/>
+            <circle cx="15" cy="18.2" r="1.4" fill="#FFFFFF"/>
+            <circle cx="21" cy="18.2" r="1.4" fill="#FFFFFF"/>
+            <path d="M16.8 20.3C17.4 21 18.6 21 19.2 20.3" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div>
+          <div class="brand-title">Purr Elixir</div>
+          <div class="brand-sub">Cat Potion Sort · Support Center</div>
+        </div>
+      </div>
+
+      <div class="lang-toggle" role="tablist" aria-label="Language switcher">
+        <button type="button" id="btn-en" class="lang-btn is-active" role="tab" aria-selected="true">English</button>
+        <button type="button" id="btn-tr" class="lang-btn" role="tab" aria-selected="false">Türkçe</button>
+      </div>
+    </header>
+
+    <!-- ENGLISH CONTENT -->
+    <main id="content-en">
+      <section class="hero">
+        <div class="hero-kicker">App Support &amp; Help Desk</div>
+        <h1>How Can We Help Your Apothecary?</h1>
+        <p>Need help with a potion shelf, unlocking visitor cats, accessibility settings, or reporting a bug? Browse quick answers below or email our indie studio directly.</p>
+        <a class="cta-btn" href="mailto:erdem@skyhancloud.com?subject=Purr%20Elixir%20Support%20(v1.0.0)">
+          ✉ Email erdem@skyhancloud.com
+        </a>
+      </section>
+
+      <div class="grid-2">
+        <section class="card">
+          <h2>Quick Gameplay Guide</h2>
+          <p><strong>1. Lift &amp; Pour:</strong> Tap a crystal vial to lift it, then tap another vial with the same top color or an empty vial (max 4 units per vial).</p>
+          <p><strong>2. Seal with Cat-Ear Corks:</strong> Fill a vial with 4 matching elixir units to seal it with a pop! Seal every color on the shelf to deliver the order.</p>
+          <p><strong>3. Smart Guard:</strong> Single-color vials cannot be moved into an empty vial so you never waste a move.</p>
+        </section>
+
+        <section class="card">
+          <h2>Helpful Workshop Tools</h2>
+          <p><strong>Unlimited Undo:</strong> Step back freely—your undo history even stays saved if you close and reopen the app.</p>
+          <p><strong>Smart Hints:</strong> Get 2 free optimal From → To hints on every shelf, plus optional rewarded hints if you want more.</p>
+          <p><strong>+1 Empty Flask:</strong> Add up to 2 extra empty crystal vials per shelf whenever a Master or Grandmaster order gets tight.</p>
+        </section>
+      </div>
+
+      <section class="card">
+        <h2>Meet the 6 Unlockable Visitor Cats</h2>
+        <p>Complete campaign milestones to invite new cats into your apothecary, then tap any unlocked cat in the <strong>Cats</strong> tab to make them your live talking assistant:</p>
+        <div class="cat-grid">
+          <div class="cat-item">
+            <div class="cat-name">Mochi <span class="cat-badge">Starter</span></div>
+            <div class="cat-meta">Lavender Apprentice · Favorite: Lavender Dream</div>
+          </div>
+          <div class="cat-item">
+            <div class="cat-name">Biscuit <span class="cat-badge">Level 3</span></div>
+            <div class="cat-meta">Sunny Tabby · Favorite: Sun Mango</div>
+          </div>
+          <div class="cat-item">
+            <div class="cat-name">Luna <span class="cat-badge">Level 8</span></div>
+            <div class="cat-meta">Sapphire Tuxedo · Favorite: Sky Sapphire</div>
+          </div>
+          <div class="cat-item">
+            <div class="cat-name">Cloud <span class="cat-badge">Level 15</span></div>
+            <div class="cat-meta">Mint Persian · Favorite: Mint Moon</div>
+          </div>
+          <div class="cat-item">
+            <div class="cat-name">Matcha <span class="cat-badge">Level 25</span></div>
+            <div class="cat-meta">Calico Herbalist · Favorite: Clover Elixir</div>
+          </div>
+          <div class="cat-item">
+            <div class="cat-name">Cleo <span class="cat-badge">Level 40</span></div>
+            <div class="cat-meta">Starlight Royal · Favorite: Berry Starlight</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Frequently Asked Questions</h2>
+
+        <details open>
+          <summary>Are all 120 levels and Endless Alchemy shelves guaranteed solvable?</summary>
+          <p>Yes! Every single campaign level (1–60), every 60-day Daily Brew order, and every on-device Endless Alchemy shelf is mathematically verified to be 100% solvable from its starting layout. If your current moves reach a dead end, the workshop instantly alerts you so you can Undo, add +1 Empty Flask, or Restart.</p>
+        </details>
+
+        <details>
+          <summary>Does Purr Elixir work without Wi-Fi or cellular data?</summary>
+          <p>Yes! Purr Elixir is 100% offline-first. All 120 levels, Endless Alchemy generation, talking cat dialogues, music, sound effects, and your local SQLite progress work smoothly on flights and commutes without an internet connection.</p>
+        </details>
+
+        <details>
+          <summary>How do I turn on Colorblind Symbols or Twilight Dark Mode?</summary>
+          <p>Open the <strong>Cats</strong> tab and scroll to <strong>Game &amp; Accessibility</strong> to enable <strong>Colorblind Symbols</strong> (displays crisp white shapes ★ ▲ ☀ ☾ ✦ ❀ ♣ ♥ ◆ ⬡ on all 10 elixir colors). Right below under <strong>Appearance &amp; Language</strong>, switch between Light, Dark, or System themes and English or Türkçe anytime.</p>
+        </details>
+
+        <details>
+          <summary>Can I silence the cat speech bubbles or music?</summary>
+          <p>Of course! Tap the musical note icon in the top header anytime to toggle music immediately, or open the <strong>Cats</strong> tab to toggle Apothecary Music, Pour &amp; Meow SFX, Haptic Feedback, and Cat Speech Bubbles independently.</p>
+        </details>
+
+        <details>
+          <summary>How do I reset my progress or report a bug?</summary>
+          <p>To start fresh, go to <strong>Cats Tab → Reset All Progress</strong> (your audio and theme settings are preserved). To report a bug or suggest a feature, email <a href="mailto:erdem@skyhancloud.com">erdem@skyhancloud.com</a> with your iPhone model, iOS version, and level number. We typically reply within 1–2 business days.</p>
+        </details>
+      </section>
+    </main>
+
+    <!-- TURKISH CONTENT -->
+    <main id="content-tr" hidden>
+      <section class="hero">
+        <div class="hero-kicker">Uygulama Desteği ve Yardım</div>
+        <h1>Atölyene Nasıl Yardımcı Olabiliriz?</h1>
+        <p>Bir iksir rafı, ziyaretçi kedi kilitleri, erişilebilirlik ayarları veya hata bildirimi konusunda yardıma mı ihtiyacın var? Aşağıdaki hızlı yanıtlara göz at veya doğrudan bize yaz.</p>
+        <a class="cta-btn" href="mailto:erdem@skyhancloud.com?subject=Purr%20Elixir%20Destek%20(v1.0.0)">
+          ✉ erdem@skyhancloud.com
+        </a>
+      </section>
+
+      <div class="grid-2">
+        <section class="card">
+          <h2>Hızlı Oynanış Rehberi</h2>
+          <p><strong>1. Kaldır ve Dök:</strong> Bir kristal şişeye dokunup kaldır, ardından üst rengi aynı olan başka bir şişeye veya boş bir şişeye dokun (en fazla 4 birim).</p>
+          <p><strong>2. Kedi Kulaklı Tıpayla Mühürle:</strong> 4 eşleşen birimle dolan şişe "pop!" diye mühürlenir. Raftaki tüm renkleri toplayıp siparişi teslim et.</p>
+          <p><strong>3. Oyuncu Dostu Koruma:</strong> Tek renkten oluşan şişeler boşa hamle harcamaman için boş şişeye aktarılmaz.</p>
+        </section>
+
+        <section class="card">
+          <h2>Atölye Yardımcı Araçları</h2>
+          <p><strong>Sınırsız Geri Al:</strong> Dilediğin kadar geri adım at—geri alma geçmişin uygulamayı kapatıp açsan bile yerel SQLite içinde saklanır.</p>
+          <p><strong>Akıllı İpucu:</strong> Her bölümde en kısa Al → Dök hamlesini gösteren 2 ücretsiz ipucu ve istersen isteğe bağlı ödüllü ek ipucu.</p>
+          <p><strong>+1 Boş Şişe:</strong> Zorlu Usta veya Büyük Usta raflarında bölüm başına en fazla 2 ekstra boş şişe ekleyebilirsin.</p>
+        </section>
+      </div>
+
+      <section class="card">
+        <h2>6 Açılabilir Ziyaretçi Kedi</h2>
+        <p>Kampanya kilometre taşlarını tamamlayarak yeni kedileri atölyene davet et; ardından <strong>Kediler</strong> sekmesinden istediğin açık kediyi aktif konuşan asistanın seç:</p>
+        <div class="cat-grid">
+          <div class="cat-item">
+            <div class="cat-name">Mochi <span class="cat-badge">Başlangıç</span></div>
+            <div class="cat-meta">Lavanta Çırak Kedi · Favori: Lavanta Düşü</div>
+          </div>
+          <div class="cat-item">
+            <div class="cat-name">Tarçın <span class="cat-badge">Bölüm 3</span></div>
+            <div class="cat-meta">Güneşli Tekir · Favori: Güneş Mangosu</div>
+          </div>
+          <div class="cat-item">
+            <div class="cat-name">Gece <span class="cat-badge">Bölüm 8</span></div>
+            <div class="cat-meta">Safir Smokin · Favori: Gök Safiri</div>
+          </div>
+          <div class="cat-item">
+            <div class="cat-name">Bulut <span class="cat-badge">Bölüm 15</span></div>
+            <div class="cat-meta">Nane İran Kedisi · Favori: Nane Ayı</div>
+          </div>
+          <div class="cat-item">
+            <div class="cat-name">Lokum <span class="cat-badge">Bölüm 25</span></div>
+            <div class="cat-meta">Üç Renkli Aktar · Favori: Yonca İksiri</div>
+          </div>
+          <div class="cat-item">
+            <div class="cat-name">Pamuk <span class="cat-badge">Bölüm 40</span></div>
+            <div class="cat-meta">Yıldız Kraliyet Kedisi · Favori: Çilek Yıldızı</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Sık Sorulan Sorular</h2>
+
+        <details open>
+          <summary>120 bölümün tamamı ve Sonsuz Simya %100 çözülebilir mi?</summary>
+          <p>Evet! 60 kampanya bölümünün, 60 Günlük Özel Siparişin ve cihaz içinde üretilen her Sonsuz Simya rafının başlangıçta %100 çözülebilir olduğu matematiksel olarak doğrulanmıştır. Hamleler çıkmaza girerse oyun anında uyarır; Geri Al, +1 Boş Şişe veya Yeniden Başlat ile kolayca devam edebilirsin.</p>
+        </details>
+
+        <details>
+          <summary>Purr Elixir internet olmadan çalışır mı?</summary>
+          <p>Evet! Purr Elixir %100 çevrimdışı odaklıdır. Tüm 120 bölüm, Sonsuz Simya üreticisi, konuşan kedi diyalogları, müzik, dökme sesleri ve yerel SQLite ilerlemen uçakta veya metroda internetsiz kusursuz çalışır.</p>
+        </details>
+
+        <details>
+          <summary>Renk Körlüğü Sembollerini veya Koyu Modu nasıl açarım?</summary>
+          <p><strong>Kediler</strong> sekmesinde <strong>Oyun ve Erişilebilirlik</strong> bölümünden <strong>Renk Körlüğü Sembolleri</strong> anahtarını açabilirsin (10 iksir renginin tamamında net beyaz semboller ★ ▲ ☀ ☾ ✦ ❀ ♣ ♥ ◆ ⬡ görünür). Hemen alttaki <strong>Görünüm ve Dil</strong> alanından Açık, Koyu veya Sistem temasını ve Türkçe / English dilini anında değiştirebilirsin.</p>
+        </details>
+
+        <details>
+          <summary>Kedi konuşma balonlarını veya müziği kapatabilir miyim?</summary>
+          <p>Elbette! Üst çubuktaki nota simgesiyle müziği tek dokunuşla kapatıp açabilir; <strong>Kediler</strong> sekmesinden Atölye Müziği, Dökme &amp; Miyav Sesleri, Dokunsal Titreşim ve Kedi Konuşma Balonları ayarlarını ayrı ayrı yönetebilirsin.</p>
+        </details>
+
+        <details>
+          <summary>İlerlememi nasıl sıfırlarım veya hata bildiririm?</summary>
+          <p>Baştan başlamak için <strong>Kediler Sekmesi → İlerlemeyi Sıfırla</strong> seçeneğini kullanabilirsin (ses ve tema tercihlerin korunur). Hata bildirimi veya öneri için iPhone modelin, iOS sürümün ve bölüm numaranla birlikte <a href="mailto:erdem@skyhancloud.com">erdem@skyhancloud.com</a> adresine yazabilirsin. Genellikle 1–2 iş günü içinde yanıt veriyoruz.</p>
+        </details>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-links">
+        <a href="./privacy-policy.html" id="link-privacy">Privacy Policy</a>
+        <a href="mailto:erdem@skyhancloud.com">erdem@skyhancloud.com</a>
+      </div>
+      <div>© 2026 Purr Elixir · All Rights Reserved</div>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      const btnEn = document.getElementById('btn-en');
+      const btnTr = document.getElementById('btn-tr');
+      const enEl = document.getElementById('content-en');
+      const trEl = document.getElementById('content-tr');
+      const privLink = document.getElementById('link-privacy');
+
+      function setLang(lang) {
+        const isTr = lang === 'tr';
+        document.documentElement.lang = isTr ? 'tr' : 'en';
+        enEl.hidden = isTr;
+        trEl.hidden = !isTr;
+        btnEn.classList.toggle('is-active', !isTr);
+        btnTr.classList.toggle('is-active', isTr);
+        btnEn.setAttribute('aria-selected', String(!isTr));
+        btnTr.setAttribute('aria-selected', String(isTr));
+        privLink.textContent = isTr ? 'Gizlilik Politikası' : 'Privacy Policy';
+        privLink.href = isTr ? './privacy-policy.html?lang=tr' : './privacy-policy.html';
+      }
+
+      btnEn.addEventListener('click', () => setLang('en'));
+      btnTr.addEventListener('click', () => setLang('tr'));
+
+      const qsLang = new URLSearchParams(window.location.search).get('lang');
+      if (qsLang === 'tr' || (!qsLang && (navigator.language || '').toLowerCase().startsWith('tr'))) {
+        setLang('tr');
+      }
+    })();
+  </script>
+</body>
+</html>
