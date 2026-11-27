@@ -1,0 +1,154 @@
+{
+  "ok": true,
+  "appDir": "/home/erdemskywalker/app-factory/apps/_smoke-test",
+  "mode": "all",
+  "consoleErrors": [],
+  "pageErrors": [],
+  "failedRequests": [],
+  "checks": [
+    {
+      "screen": "home",
+      "variant": "promax-light-prod",
+      "dbMode": "wasm-sqlite",
+      "overflowX": false,
+      "missingI18n": [],
+      "tinyButtons": [],
+      "adSlots": [
+        {
+          "id": "home-inline-card",
+          "classes": "af-ad-slot af-ad-slot--house",
+          "width": 398,
+          "height": 92
+        }
+      ]
+    },
+    {
+      "screen": "home",
+      "variant": "promax-dark-prod",
+      "dbMode": "wasm-sqlite",
+      "overflowX": false,
+      "missingI18n": [],
+      "tinyButtons": [],
+      "adSlots": [
+        {
+          "id": "home-inline-card",
+          "classes": "af-ad-slot af-ad-slot--house",
+          "width": 398,
+          "height": 92
+        }
+      ]
+    },
+    {
+      "screen": "home",
+      "variant": "promax-light-devad",
+      "dbMode": "wasm-sqlite",
+      "overflowX": false,
+      "missingI18n": [],
+      "tinyButtons": [],
+      "adSlots": [
+        {
+          "id": "home-inline-card",
+          "classes": "af-ad-slot af-ad-slot--dev",
+          "width": 398,
+          "height": 92
+        }
+      ]
+    },
+    {
+      "screen": "home",
+      "variant": "se-light-tr",
+      "dbMode": "wasm-sqlite",
+      "overflowX": false,
+      "missingI18n": [],
+      "tinyButtons": [],
+      "adSlots": [
+        {
+          "id": "home-inline-card",
+          "classes": "af-ad-slot af-ad-slot--house",
+          "width": 343,
+          "height": 92
+        }
+      ]
+    },
+    {
+      "screen": "settings",
+      "variant": "promax-light-prod",
+      "dbMode": "wasm-sqlite",
+      "overflowX": false,
+      "missingI18n": [],
+      "tinyButtons": [],
+      "adSlots": [
+        {
+          "id": "settings-banner",
+          "classes": "af-ad-slot af-ad-slot--house",
+          "width": 398,
+          "height": 78
+        }
+      ]
+    },
+    {
+      "screen": "settings",
+      "variant": "promax-dark-prod",
+      "dbMode": "wasm-sqlite",
+      "overflowX": false,
+      "missingI18n": [],
+      "tinyButtons": [],
+      "adSlots": [
+        {
+          "id": "settings-banner",
+          "classes": "af-ad-slot af-ad-slot--house",
+          "width": 398,
+          "height": 78
+        }
+      ]
+    },
+    {
+      "screen": "settings",
+      "variant": "promax-light-devad",
+      "dbMode": "wasm-sqlite",
+      "overflowX": false,
+      "missingI18n": [],
+      "tinyButtons": [],
+      "adSlots": [
+        {
+          "id": "settings-banner",
+          "classes": "af-ad-slot af-ad-slot--dev",
+          "width": 398,
+          "height": 78
+        }
+      ]
+    },
+    {
+      "screen": "settings",
+      "variant": "se-light-tr",
+      "dbMode": "wasm-sqlite",
+      "overflowX": false,
+      "missingI18n": [],
+      "tinyButtons": [],
+      "adSlots": [
+        {
+          "id": "settings-banner",
+          "classes": "af-ad-slot af-ad-slot--house",
+          "width": 343,
+          "height": 78
+        }
+      ]
+    }
+  ],
+  "e2eResult": {
+    "ok": true,
+    "initialCount": 4,
+    "afterInsertCount": 5,
+    "titleTr": "Ayarlar"
+  },
+  "screenshots": [
+    "/home/erdemskywalker/app-factory/apps/_smoke-test/artifacts/screenshots/home__promax-light-prod.png",
+    "/home/erdemskywalker/app-factory/apps/_smoke-test/artifacts/screenshots/home__promax-dark-prod.png",
+    "/home/erdemskywalker/app-factory/apps/_smoke-test/artifacts/screenshots/home__promax-light-devad.png",
+    "/home/erdemskywalker/app-factory/apps/_smoke-test/artifacts/screenshots/home__se-light-tr.png",
+    "/home/erdemskywalker/app-factory/apps/_smoke-test/artifacts/screenshots/settings__promax-light-prod.png",
+    "/home/erdemskywalker/app-factory/apps/_smoke-test/artifacts/screenshots/settings__promax-dark-prod.png",
+    "/home/erdemskywalker/app-factory/apps/_smoke-test/artifacts/screenshots/settings__promax-light-devad.png",
+    "/home/erdemskywalker/app-factory/apps/_smoke-test/artifacts/screenshots/settings__se-light-tr.png"
+  ]
+}

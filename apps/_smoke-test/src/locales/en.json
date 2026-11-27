@@ -1,0 +1,19 @@
+{
+  "app.name": "Core Engine",
+  "tab.home": "Overview",
+  "tab.settings": "Settings",
+  "home.title": "Core Engine",
+  "home.kicker": "REAL SQLITE STATUS",
+  "home.stat_label": "{{verified}} / {{total}} Verified",
+  "home.hero_desc": "All rows below are queried live from real WASM SQLite.",
+  "home.section_checks": "Active Engine Modules",
+  "home.add_btn": "Add SQLite Record",
+  "home.sheet_title": "New SQLite Record",
+  "home.input_placeholder": "Enter module note...",
+  "home.saved_toast": "Saved to SQLite",
+  "settings.title": "Settings",
+  "settings.section_prefs": "Preferences",
+  "settings.section_engine": "Runtime Diagnostics",
+  "settings.db_mode": "Database Engine",
+  "settings.ad_mode": "AdSlot Mode"
+}

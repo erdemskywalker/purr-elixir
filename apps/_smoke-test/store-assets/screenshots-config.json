@@ -1,0 +1,18 @@
+{
+  "accent": "#0d9488",
+  "bgStart": "#042f2e",
+  "bgEnd": "#0d9488",
+  "languages": ["en", "tr"],
+  "slides": [
+    {
+      "id": "overview",
+      "badge": { "en": "IOS-FIRST ENGINE", "tr": "IOS-FIRST MOTOR" },
+      "headline": { "en": "Native Feel.\nReal SQLite.", "tr": "Native His.\nGerçek SQLite." },
+      "subheadline": { "en": "Zero mock data, instant offline speed.", "tr": "Sıfır sahte veri, anında çevrimdışı hız." },
+      "sourcePng": {
+        "en": "artifacts/screenshots/home__promax-light-prod.png",
+        "tr": "artifacts/screenshots/home__se-light-tr.png"
+      }
+    }
+  ]
+}

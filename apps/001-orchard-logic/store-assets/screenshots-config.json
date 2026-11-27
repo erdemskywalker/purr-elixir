@@ -1,0 +1,115 @@
+{
+  "appName": "Fruitopia",
+  "bundleId": "com.erdem.fruitopia",
+  "accent": "#D9383E",
+  "bgStart": "#241615",
+  "bgEnd": "#A91E26",
+  "languages": ["en", "tr"],
+  "slides": [
+    {
+      "id": "flagship-10x10",
+      "bgStart": "#5C1117",
+      "bgEnd": "#C82C33",
+      "badge": {
+        "en": "10×10 FRUIT LOGIC",
+        "tr": "10×10 MEYVE SUDOKUSU"
+      },
+      "headline": {
+        "en": "Pure Deduction.\nZero Guessing.",
+        "tr": "Saf Mantık.\nSıfır Tahmin."
+      },
+      "subheadline": {
+        "en": "Place 1 fruit per row, column, and color zone — never touching, even diagonally.",
+        "tr": "Her satır, sütun ve renk bölgesine tek meyve — çaprazdan bile dokunmasın."
+      },
+      "sourcePng": {
+        "en": "artifacts/screenshots/play__promax-light-prod.png",
+        "tr": "artifacts/screenshots/play__se-light-tr.png"
+      }
+    },
+    {
+      "id": "smart-controls",
+      "bgStart": "#113A24",
+      "bgEnd": "#1E6B40",
+      "badge": {
+        "en": "CRAFTED FOR IPHONE",
+        "tr": "HIZLI VE AKICI"
+      },
+      "headline": {
+        "en": "Tap, Drag × &\nAuto-Eliminate",
+        "tr": "Dokun, Sürükle × &\nOto Eleme"
+      },
+      "subheadline": {
+        "en": "Glide across squares to mark × fast, with Auto-×, unlimited undo, and smart hints.",
+        "tr": "Parmağını kaydırarak hızlı × koy; Otomatik ×, sınırsız geri al ve akıllı ipucuyla çöz."
+      },
+      "sourcePng": {
+        "en": "artifacts/screenshots/play-tutorial-4x4__promax-light-prod.png",
+        "tr": "artifacts/screenshots/play-tutorial-4x4__se-light-tr.png"
+      }
+    },
+    {
+      "id": "daily-harvest",
+      "bgStart": "#231412",
+      "bgEnd": "#8C2026",
+      "badge": {
+        "en": "DAILY 10×10 HARVEST",
+        "tr": "GÜNLÜK 10×10 HASAT"
+      },
+      "headline": {
+        "en": "A Fresh 10×10\nEvery Single Day",
+        "tr": "Her Gün Taze Bir\n10×10 Bulmaca"
+      },
+      "subheadline": {
+        "en": "Build your daily harvest streak and beat your personal best solve time.",
+        "tr": "Günlük hasat serini büyüt ve kendi en iyi çözüm süreni geliştir."
+      },
+      "sourcePng": {
+        "en": "artifacts/screenshots/home__promax-light-prod.png",
+        "tr": "artifacts/screenshots/home__se-light-tr.png"
+      }
+    },
+    {
+      "id": "verified-levels",
+      "bgStart": "#3A2210",
+      "bgEnd": "#A45318",
+      "badge": {
+        "en": "30 VERIFIED LEVELS",
+        "tr": "30 DOĞRULANMIŞ SEVİYE"
+      },
+      "headline": {
+        "en": "Learn on 4×4.\nMaster 10×10.",
+        "tr": "4×4 ile Öğren.\n10×10'da Ustalaş."
+      },
+      "subheadline": {
+        "en": "Every board is mathematically proven to have one unique solution.",
+        "tr": "Her tahta matematiksel olarak tek ve benzersiz çözümle doğrulandı."
+      },
+      "sourcePng": {
+        "en": "artifacts/screenshots/levels__promax-light-prod.png",
+        "tr": "artifacts/screenshots/levels__se-light-tr.png"
+      }
+    },
+    {
+      "id": "offline-stats",
+      "bgStart": "#161311",
+      "bgEnd": "#4B3529",
+      "badge": {
+        "en": "100% OFFLINE & PRIVATE",
+        "tr": "%100 ÇEVRİMDIŞI VE GİZLİ"
+      },
+      "headline": {
+        "en": "Your Orchard,\nAnywhere",
+        "tr": "İnternetsiz,\nHer Yerde Oyna"
+      },
+      "subheadline": {
+        "en": "Track stats, switch Light/Dark themes, and play with zero account required.",
+        "tr": "İstatistiklerini takip et, Açık/Koyu tema seç ve hesapsız çevrimdışı oyna."
+      },
+      "sourcePng": {
+        "en": "artifacts/screenshots/stats__promax-light-prod.png",
+        "tr": "artifacts/screenshots/stats__se-light-tr.png"
+      }
+    }
+  ]
+}

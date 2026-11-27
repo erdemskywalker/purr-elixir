@@ -1,0 +1,6 @@
+{
+  "appId": "com.erdem.factorysmoke",
+  "appName": "Factory Smoke",
+  "webDir": "www",
+  "bundledWebRuntime": false
+}

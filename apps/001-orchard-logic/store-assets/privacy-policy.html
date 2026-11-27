@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="light dark" />
+  <title>Privacy Policy — Fruitopia</title>
+  <style>
+    :root {
+      --bg: #FAF7F2;
+      --card: #FFFFFF;
+      --ink: #1C1917;
+      --muted: #635B54;
+      --border: rgba(99, 91, 84, 0.16);
+      --accent: #D9383E;
+      --accent-soft: rgba(217, 56, 62, 0.10);
+      --accent-ink: #B82329;
+      --success: #1B7A3B;
+      --success-soft: rgba(27, 122, 59, 0.11);
+      --radius: 18px;
+      --shadow: 0 2px 12px rgba(28, 25, 23, 0.05);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #141210;
+        --card: #1F1C19;
+        --ink: #F7F4EF;
+        --muted: #BEB5AA;
+        --border: rgba(247, 244, 239, 0.10);
+        --accent: #FF646B;
+        --accent-soft: rgba(255, 100, 107, 0.18);
+        --accent-ink: #FF858A;
+        --success: #4ADE80;
+        --success-soft: rgba(74, 222, 128, 0.16);
+        --shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 28px 20px 64px;
+    }
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--ink);
+    }
+    .brand-mark {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #A91E26, #D9383E);
+      display: grid;
+      place-items: center;
+      color: #FFFFFF;
+      font-weight: 800;
+      font-size: 20px;
+      box-shadow: 0 6px 16px rgba(184, 35, 41, 0.25);
+    }
+    .brand-name {
+      font-size: 19px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+    .brand-sub {
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .lang-switch {
+      display: inline-flex;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 4px;
+      gap: 4px;
+      box-shadow: var(--shadow);
+    }
+    .lang-btn {
+      border: 0;
+      background: transparent;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+      padding: 7px 14px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: background 0.15s ease, color 0.15s ease;
+    }
+    .lang-btn[aria-pressed="true"] {
+      background: var(--accent);
+      color: #FFFFFF;
+    }
+    .hero {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 26px 24px;
+      margin-bottom: 20px;
+      box-shadow: var(--shadow);
+    }
+    .pill {
+      display: inline-block;
+      padding: 4px 11px;
+      border-radius: 999px;
+      background: var(--success-soft);
+      color: var(--success);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(26px, 4vw, 34px);
+      line-height: 1.18;
+      letter-spacing: -0.025em;
+    }
+    .meta {
+      margin: 0;
+      font-size: 14px;
+      color: var(--muted);
+    }
+    section.card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px 24px;
+      margin-bottom: 16px;
+      box-shadow: var(--shadow);
+    }
+    h2 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      letter-spacing: -0.015em;
+    }
+    p {
+      margin: 0 0 12px;
+      color: var(--ink);
+    }
+    p:last-child { margin-bottom: 0; }
+    ul {
+      margin: 8px 0 0;
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    li:last-child { margin-bottom: 0; }
+    a {
+      color: var(--accent-ink);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    a:hover { text-decoration: underline; }
+    .callout {
+      padding: 14px 16px;
+      border-radius: 12px;
+      background: var(--accent-soft);
+      border: 1px solid var(--border);
+      font-size: 14.5px;
+      margin-top: 12px;
+    }
+    footer {
+      margin-top: 28px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px;
+      font-size: 13.5px;
+      color: var(--muted);
+    }
+    [data-lang-section][hidden] { display: none !important; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">✦</div>
+        <div>
+          <div class="brand-name">Fruitopia</div>
+          <div class="brand-sub">com.erdem.fruitopia</div>
+        </div>
+      </div>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" class="lang-btn" id="btn-lang-en" aria-pressed="true">English</button>
+        <button type="button" class="lang-btn" id="btn-lang-tr" aria-pressed="false">Türkçe</button>
+      </div>
+    </header>
+
+    <!-- ================= ENGLISH VERSION ================= -->
+    <main data-lang-section="en">
+      <div class="hero">
+        <span class="pill">Offline-First &amp; Private</span>
+        <h1>Privacy Policy</h1>
+        <p class="meta"><strong>Effective Date:</strong> November 25, 2026 &middot; <strong>App:</strong> Fruitopia (<code>com.erdem.fruitopia</code>)</p>
+      </div>
+
+      <section class="card">
+        <h2>1. Our Privacy Commitment</h2>
+        <p>Fruitopia is designed as an offline-first logic puzzle game. We do not require account registration, sign-in, or personal profiles, and we do not operate developer servers that collect or store your personal information.</p>
+      </section>
+
+      <section class="card">
+        <h2>2. Data Stored Locally on Your Device</h2>
+        <p>All gameplay data is stored exclusively inside an on-device local SQLite database (<code>fruitopia_db</code>), including:</p>
+        <ul>
+          <li>Campaign puzzle progress, saved board states, star ratings, and personal best times.</li>
+          <li>Daily Harvest 10&times;10 completion records and daily streaks.</li>
+          <li>Gameplay and display preferences (Auto-&times; helper, conflict highlights, haptics, Light/Dark theme, and language selection).</li>
+        </ul>
+        <p class="callout">This local data never leaves your device. Deleting the Fruitopia app from your iPhone or iPad permanently removes all locally stored puzzle progress and settings.</p>
+      </section>
+
+      <section class="card">
+        <h2>3. Third-Party Advertising (Google AdMob)</h2>
+        <p>To keep Fruitopia free to play, the iOS app integrates the <strong>Google Mobile Ads SDK (AdMob)</strong> to display Banner/Inline cards and optional user-initiated Rewarded Video hints. When your device is online, Google AdMob may process limited technical data in accordance with Google's Privacy Policy:</p>
+        <ul>
+          <li><strong>Device Identifiers:</strong> Advertising Identifier (IDFA, strictly only if you grant iOS App Tracking Transparency permission) and App Set / Vendor IDs.</li>
+          <li><strong>Coarse Location:</strong> Approximate region derived from IP address for ad delivery and fraud prevention.</li>
+          <li><strong>Usage &amp; Advertising Data:</strong> Ad impressions, taps, and basic interaction events.</li>
+          <li><strong>Diagnostics:</strong> Crash logs and SDK performance metrics used to maintain ad stability.</li>
+        </ul>
+        <p>Learn how Google handles advertising data at <a href="https://policies.google.com/technologies/partner-sites" rel="noopener noreferrer" target="_blank">Google Partner Sites Privacy Policy</a>.</p>
+      </section>
+
+      <section class="card">
+        <h2>4. App Tracking Transparency (ATT) &amp; Regional Consent (GDPR / EEA / UK)</h2>
+        <p>On iOS, Fruitopia requests your permission via Apple's <strong>App Tracking Transparency (ATT)</strong> prompt and, where legally required (such as in the EEA and UK), displays Google's User Messaging Platform (UMP) consent form before initializing personalized ads.</p>
+        <ul>
+          <li>If you choose <strong>"Ask App Not to Track"</strong> or decline personalized advertising, Fruitopia remains 100% playable and AdMob will only serve non-personalized/contextual ads (or a built-in offline house recommendation card when offline or on no-fill).</li>
+          <li>You can revoke or change tracking permission at any time in <strong>iOS Settings &rarr; Privacy &amp; Security &rarr; Tracking</strong>.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>5. Children's Privacy</h2>
+        <p>Fruitopia is rated <strong>4+</strong> and is suitable for a general audience. We do not knowingly collect, solicit, or store personal information from children under 13 (or the applicable digital age of consent in your jurisdiction). If you believe a child has provided personal data via email support, please contact us so we can delete it promptly.</p>
+      </section>
+
+      <section class="card">
+        <h2>6. Your Rights &amp; Data Deletion</h2>
+        <p>Under GDPR, CCPA/CPRA, and Turkish KVKK regulations, you have the right to know what data is processed and to control advertising tracking. Because Fruitopia stores all gameplay records solely on your device, you hold direct control over your data at all times—uninstalling the app immediately deletes the local database.</p>
+      </section>
+
+      <section class="card">
+        <h2>7. Policy Updates &amp; Contact</h2>
+        <p>We may update this Privacy Policy to reflect app improvements or regulatory changes. Any updates will be posted on this page with a revised effective date.</p>
+        <p>For privacy questions or support inquiries, please contact: <a href="mailto:erdem@skyhancloud.com">erdem@skyhancloud.com</a></p>
+      </section>
+    </main>
+
+    <!-- ================= TURKISH VERSION ================= -->
+    <main data-lang-section="tr" hidden>
+      <div class="hero">
+        <span class="pill">Çevrimdışı ve Gizlilik Odaklı</span>
+        <h1>Gizlilik Politikası</h1>
+        <p class="meta"><strong>Yürürlük Tarihi:</strong> 25 Kasım 2026 &middot; <strong>Uygulama:</strong> Fruitopia (<code>com.erdem.fruitopia</code>)</p>
+      </div>
+
+      <section class="card">
+        <h2>1. Gizlilik Taahhüdümüz</h2>
+        <p>Fruitopia çevrimdışı çalışan (offline-first) bir mantık bulmacası olarak tasarlanmıştır. Hesap açma, giriş yapma veya kişisel profil oluşturma zorunluluğu yoktur; geliştirici sunucularında kişisel veriniz toplanmaz ve saklanmaz.</p>
+      </section>
+
+      <section class="card">
+        <h2>2. Cihazınızda Yerel Olarak Saklanan Veriler</h2>
+        <p>Tüm oyun verileriniz yalnızca cihazınızın yerel SQLite veritabanında (<code>fruitopia_db</code>) tutulur:</p>
+        <ul>
+          <li>Kampanya seviye ilerlemeleri, kayıtlı tahta durumları, yıldız puanları ve en iyi çözüm süreleri.</li>
+          <li>Günlük Hasat 10&times;10 tamamlama geçmişi ve günlük seri (streak) bilgileri.</li>
+          <li>Oyun ve görünüm tercihleri (Otomatik &times;, kural ihlali vurgusu, dokunsal titreşim, Açık/Koyu tema ve dil seçimi).</li>
+        </ul>
+        <p class="callout">Bu yerel veriler cihazınızdan dışarı gönderilmez. Fruitopia uygulamasını iPhone veya iPad cihazınızdan sildiğinizde tüm yerel ilerleme ve ayarlar kalıcı olarak silinir.</p>
+      </section>
+
+      <section class="card">
+        <h2>3. Üçüncü Taraf Reklam Hizmetleri (Google AdMob)</h2>
+        <p>Fruitopia'nın ücretsiz kalabilmesi için iOS uygulamasında banner/kart reklamları ve isteğe bağlı ek ipucu ödüllü reklamları amacıyla <strong>Google Mobile Ads SDK (AdMob)</strong> kullanılmaktadır. Cihazınız çevrimiçi olduğunda Google AdMob, Google Gizlilik Politikası kapsamında sınırlı teknik verileri işleyebilir:</p>
+        <ul>
+          <li><strong>Cihaz Tanımlayıcıları:</strong> Reklam Tanımlayıcısı (IDFA — yalnızca iOS Uygulama Takibi Şeffaflığı izni verirseniz) ve uygulama/satıcı tanımlayıcıları.</li>
+          <li><strong>Yaklaşık Konum:</strong> Reklam sunumu ve sahtecilik önleme için IP adresinden türetilen genel bölge bilgisi.</li>
+          <li><strong>Kullanım ve Reklam Verileri:</strong> Reklam gösterimleri, tıklamaları ve temel etkileşim kayıtları.</li>
+          <li><strong>Tanılama Verileri:</strong> SDK kararlılığı için çökme ve performans kayıtları.</li>
+        </ul>
+        <p>Google'ın reklam verilerini nasıl işlediğini <a href="https://policies.google.com/technologies/partner-sites?hl=tr" rel="noopener noreferrer" target="_blank">Google İş Ortağı Siteleri Gizlilik Politikası</a> sayfasından inceleyebilirsiniz.</p>
+      </section>
+
+      <section class="card">
+        <h2>4. Uygulama Takibi Şeffaflığı (ATT) ve Bölgesel Onay (KVKK / GDPR)</h2>
+        <p>iOS üzerinde Fruitopia, kişiselleştirilmiş reklamları başlatmadan önce Apple'ın <strong>Uygulama Takibi Şeffaflığı (ATT)</strong> iznini ve gerekli bölgelerde (AEA/Birleşik Krallık) Google UMP onay formunu sunar.</p>
+        <ul>
+          <li><strong>"Uygulamadan Takip Etmemesini İste"</strong> seçeneğini tercih etseniz bile tüm 90 bulmaca ve Sonsuz Mod ve oyun özellikleri %100 erişilebilir kalır; yalnızca kişiselleştirilmemiş reklamlar veya çevrimdışı durumlarda yerleşik tanıtım kartı gösterilir.</li>
+          <li>Takip izninizi dilediğiniz zaman <strong>iOS Ayarlar &rarr; Gizlilik ve Güvenlik &rarr; Takip</strong> menüsünden değiştirebilirsiniz.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>5. Çocukların Gizliliği</h2>
+        <p>Fruitopia <strong>4+</strong> yaş derecelendirmesine sahip olup genel izleyici kitlesine uygundur. 13 yaş altındaki (veya ilgili yasadaki dijital rıza yaşının altındaki) çocuklardan bilerek kişisel veri toplamayız. Bir çocuğun destek e-postası yoluyla kişisel bilgi paylaştığını düşünüyorsanız derhal silinmesi için bizimle iletişime geçebilirsiniz.</p>
+      </section>
+
+      <section class="card">
+        <h2>6. Haklarınız ve Veri Silme</h2>
+        <p>6698 sayılı KVKK, GDPR ve CCPA kapsamında verilerinizin işlenmesi hakkında bilgi alma ve reklam takibini kontrol etme haklarına sahipsiniz. Oyun verileriniz yalnızca cihazınızda tutulduğundan verileriniz üzerindeki tam kontrol sizdedir; uygulamayı kaldırmanız yerel veritabanını anında siler.</p>
+      </section>
+
+      <section class="card">
+        <h2>7. Politika Güncellemeleri ve İletişim</h2>
+        <p>Uygulama geliştirmeleri veya yasal düzenlemelere bağlı olarak bu Gizlilik Politikası güncellenebilir. Güncellemeler yeni yürürlük tarihiyle bu sayfada yayımlanır.</p>
+        <p>Gizlilik ve destek sorularınız için bizimle iletişime geçin: <a href="mailto:erdem@skyhancloud.com">erdem@skyhancloud.com</a></p>
+      </section>
+    </main>
+
+    <footer>
+      <span>&copy; 2026 Fruitopia &middot; Erdem App Factory</span>
+      <span><a href="./support.html">Support / Destek</a></span>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      const btnEn = document.getElementById('btn-lang-en');
+      const btnTr = document.getElementById('btn-lang-tr');
+      const secEn = document.querySelector('[data-lang-section="en"]');
+      const secTr = document.querySelector('[data-lang-section="tr"]');
+
+      function setLang(lang) {
+        const isTr = lang === 'tr';
+        document.documentElement.lang = isTr ? 'tr' : 'en';
+        document.title = isTr ? 'Gizlilik Politikası — Fruitopia' : 'Privacy Policy — Fruitopia';
+        secEn.hidden = isTr;
+        secTr.hidden = !isTr;
+        btnEn.setAttribute('aria-pressed', String(!isTr));
+        btnTr.setAttribute('aria-pressed', String(isTr));
+      }
+
+      btnEn.addEventListener('click', () => setLang('en'));
+      btnTr.addEventListener('click', () => setLang('tr'));
+
+      const params = new URLSearchParams(window.location.search);
+      const qLang = params.get('lang');
+      if (qLang === 'tr' || (!qLang && (navigator.language || '').toLowerCase().startsWith('tr'))) {
+        setLang('tr');
+      }
+    })();
+  </script>
+</body>
+</html>

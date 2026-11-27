@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="light dark" />
+  <title>Support — Fruitopia</title>
+  <style>
+    :root {
+      --bg: #FAF7F2;
+      --card: #FFFFFF;
+      --ink: #1C1917;
+      --muted: #635B54;
+      --border: rgba(99, 91, 84, 0.16);
+      --accent: #D9383E;
+      --accent-soft: rgba(217, 56, 62, 0.10);
+      --accent-ink: #B82329;
+      --radius: 18px;
+      --shadow: 0 2px 12px rgba(28, 25, 23, 0.05);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #141210;
+        --card: #1F1C19;
+        --ink: #F7F4EF;
+        --muted: #BEB5AA;
+        --border: rgba(247, 244, 239, 0.10);
+        --accent: #FF646B;
+        --accent-soft: rgba(255, 100, 107, 0.18);
+        --accent-ink: #FF858A;
+        --shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 28px 20px 64px;
+    }
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .brand-mark {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #A91E26, #D9383E);
+      display: grid;
+      place-items: center;
+      color: #FFFFFF;
+      font-weight: 800;
+      font-size: 20px;
+      box-shadow: 0 6px 16px rgba(184, 35, 41, 0.25);
+    }
+    .brand-name {
+      font-size: 19px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+    .brand-sub {
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .lang-switch {
+      display: inline-flex;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 4px;
+      gap: 4px;
+      box-shadow: var(--shadow);
+    }
+    .lang-btn {
+      border: 0;
+      background: transparent;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+      padding: 7px 14px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: background 0.15s ease, color 0.15s ease;
+    }
+    .lang-btn[aria-pressed="true"] {
+      background: var(--accent);
+      color: #FFFFFF;
+    }
+    .hero {
+      background: linear-gradient(135deg, #A91E26 0%, #C82C33 58%, #B53328 100%);
+      color: #FFFFFF;
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      margin-bottom: 20px;
+      box-shadow: 0 12px 28px rgba(184, 35, 41, 0.22);
+    }
+    .hero h1 {
+      margin: 0 0 8px;
+      font-size: clamp(26px, 4vw, 34px);
+      line-height: 1.18;
+      letter-spacing: -0.025em;
+    }
+    .hero p {
+      margin: 0 0 18px;
+      color: rgba(255, 250, 246, 0.92);
+      font-size: 15.5px;
+    }
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #FFFFFF;
+      color: #A91E26;
+      font-weight: 700;
+      font-size: 15px;
+      padding: 11px 18px;
+      border-radius: 12px;
+      text-decoration: none;
+    }
+    .cta:hover { opacity: 0.94; }
+    .rules-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 12px;
+      margin-top: 12px;
+    }
+    .rule-box {
+      padding: 14px;
+      border-radius: 12px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+    }
+    .rule-box strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--accent-ink);
+      font-size: 14.5px;
+    }
+    .rule-box span {
+      font-size: 13.5px;
+      color: var(--muted);
+    }
+    section.card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px 24px;
+      margin-bottom: 16px;
+      box-shadow: var(--shadow);
+    }
+    h2 {
+      margin: 0 0 12px;
+      font-size: 19px;
+      letter-spacing: -0.015em;
+    }
+    details {
+      border-top: 1px solid var(--border);
+      padding: 14px 0;
+    }
+    details:first-of-type { border-top: 0; padding-top: 4px; }
+    details:last-of-type { padding-bottom: 2px; }
+    summary {
+      font-weight: 700;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::after {
+      content: "+";
+      font-size: 20px;
+      font-weight: 500;
+      color: var(--accent-ink);
+      flex: 0 0 auto;
+    }
+    details[open] summary::after { content: "−"; }
+    details p {
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 14.5px;
+    }
+    a {
+      color: var(--accent-ink);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    a:hover { text-decoration: underline; }
+    footer {
+      margin-top: 28px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px;
+      font-size: 13.5px;
+      color: var(--muted);
+    }
+    [data-lang-section][hidden] { display: none !important; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">✦</div>
+        <div>
+          <div class="brand-name">Fruitopia</div>
+          <div class="brand-sub">App Support &amp; Help Center</div>
+        </div>
+      </div>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" class="lang-btn" id="btn-lang-en" aria-pressed="true">English</button>
+        <button type="button" class="lang-btn" id="btn-lang-tr" aria-pressed="false">Türkçe</button>
+      </div>
+    </header>
+
+    <!-- ================= ENGLISH VERSION ================= -->
+    <main data-lang-section="en">
+      <div class="hero">
+        <h1>Need Help with Fruitopia?</h1>
+        <p>Find quick answers about the 4 puzzle rules, 10&times;10 controls, Daily Harvest streaks, offline storage, or reach us directly.</p>
+        <a class="cta" href="mailto:erdem@skyhancloud.com?subject=Fruitopia%20iOS%20Support">Email Support &rarr;</a>
+      </div>
+
+      <section class="card">
+        <h2>How to Play (4 Core Rules)</h2>
+        <div class="rules-grid">
+          <div class="rule-box">
+            <strong>1 per Row</strong>
+            <span>Place exactly one fruit in every horizontal row.</span>
+          </div>
+          <div class="rule-box">
+            <strong>1 per Column</strong>
+            <span>Place exactly one fruit in every vertical column.</span>
+          </div>
+          <div class="rule-box">
+            <strong>1 per Color Region</strong>
+            <span>Each botanical color zone holds one of its own fruit.</span>
+          </div>
+          <div class="rule-box">
+            <strong>No Touching</strong>
+            <span>Two fruits can never touch horizontally, vertically, or diagonally.</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Frequently Asked Questions</h2>
+
+        <details open>
+          <summary>How do tap and drag controls work on 10&times;10 boards?</summary>
+          <p>Single-tap any open square to toggle a manual <strong>&times;</strong> mark; double-tap rapidly on an open square to place that zone's fruit; tap a placed fruit to clear it. On larger grids, glide your finger across empty cells to quickly drag-mark <strong>&times;</strong> in one smooth stroke.</p>
+        </details>
+
+        <details>
+          <summary>Does every puzzle really have only one valid solution?</summary>
+          <p>Yes. All 30 campaign levels (4&times;4 to 10&times;10) and all 60 rotating Daily Quest 10&times;10 boards plus on-device Endless Arcade are mathematically verified with a backtracking solver to guarantee a single unique solution.</p>
+        </details>
+
+        <details>
+          <summary>How do Auto-&times; and Smart Hints work?</summary>
+          <p>When <strong>Auto &times;</strong> is active, placing a fruit automatically marks eliminated cells in the same row, column, color region, and diagonal neighbors (and cleanly restores them if you remove that fruit). Every puzzle includes 2 free Smart Hints that pinpoint the next logical move, plus an optional +1 hint option if you need extra help.</p>
+        </details>
+
+        <details>
+          <summary>Can I play Fruitopia completely offline?</summary>
+          <p>Yes! Fruitopia is 100% offline-first. All puzzles, progress, best times, streaks, and preferences are stored locally on your device—perfect for flights, commutes, and offline focus.</p>
+        </details>
+
+        <details>
+          <summary>How do I switch between Light/Dark Mode or English/Turkish?</summary>
+          <p>Open the <strong>Stats</strong> tab in the bottom bar and scroll to <strong>Appearance &amp; Language</strong>. You can pick System, Light (Warm Ivory), or Dark (Deep Espresso), and switch instantly between English and Türkçe.</p>
+        </details>
+
+        <details>
+          <summary>How do I manage ad tracking preferences?</summary>
+          <p>You can adjust App Tracking Transparency anytime in <strong>iOS Settings &rarr; Privacy &amp; Security &rarr; Tracking</strong>. Read our <a href="./privacy-policy.html">Privacy Policy</a> for complete details.</p>
+        </details>
+      </section>
+
+      <section class="card">
+        <h2>Direct Contact</h2>
+        <p>Spotted a bug or have feedback for future puzzle packs? Email us at <a href="mailto:erdem@skyhancloud.com">erdem@skyhancloud.com</a> with your iPhone model, iOS version, and level number. We typically respond within 24–48 business hours.</p>
+      </section>
+    </main>
+
+    <!-- ================= TURKISH VERSION ================= -->
+    <main data-lang-section="tr" hidden>
+      <div class="hero">
+        <h1>Fruitopia Destek Merkezi</h1>
+        <p>4 temel kural, 10&times;10 hızlı kontroller, Günlük Hasat serileri ve çevrimdışı veriler hakkında hızlı yanıtlar veya doğrudan destek.</p>
+        <a class="cta" href="mailto:erdem@skyhancloud.com?subject=Fruitopia%20iOS%20Destek">E-posta ile Ulaş &rarr;</a>
+      </div>
+
+      <section class="card">
+        <h2>Nasıl Oynanır? (4 Temel Kural)</h2>
+        <div class="rules-grid">
+          <div class="rule-box">
+            <strong>Satırda 1 Meyve</strong>
+            <span>Her yatay satırda tam olarak bir meyve bulunmalıdır.</span>
+          </div>
+          <div class="rule-box">
+            <strong>Sütunda 1 Meyve</strong>
+            <span>Her dikey sütunda tam olarak bir meyve bulunmalıdır.</span>
+          </div>
+          <div class="rule-box">
+            <strong>Renk Bölgesinde 1</strong>
+            <span>Her renkli bahçe bölgesi kendi özel meyvesini taşır.</span>
+          </div>
+          <div class="rule-box">
+            <strong>Temas Yok</strong>
+            <span>İki meyve yatay, dikey veya çaprazdan birbirine dokunamaz.</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Sık Sorulan Sorular</h2>
+
+        <details open>
+          <summary>10&times;10 tahtalarda dokunma ve sürükleme kontrolleri nasıl çalışır?</summary>
+          <p>Açık bir kareye tek dokunuşta manuel <strong>&times;</strong> eklenir veya silinir; iki kere üst üste dokununca o bölgenin meyvesi yerleşir; meyveye tek tıklayınca temizlenir. Parmağınızı boş hücreler üzerinde kaydırarak tek harekette hızlıca <strong>&times;</strong> işaretleyebilirsiniz.</p>
+        </details>
+
+        <details>
+          <summary>Her bulmacanın gerçekten tek bir çözümü mü var?</summary>
+          <p>Evet. 30 kampanya seviyesi (4&times;4'ten 10&times;10'a) ve 60 Günlük Görev 10&times;10 bulmacası ile Sonsuz Arena tahtalarının tamamı matematiksel çözücü ile doğrulanmıştır ve tek benzersiz çözüme sahiptir.</p>
+        </details>
+
+        <details>
+          <summary>Otomatik &times; ve Akıllı İpuçları nasıl çalışır?</summary>
+          <p><strong>Oto &times;</strong> açıkken bir meyve koyduğunuzda aynı satır, sütun, renk bölgesi ve çapraz komşulardaki hücreler otomatik elenir (meyveyi kaldırırsanız bu işaretler geri alınır). Her seviyede 2 ücretsiz Akıllı İpucu ve ihtiyaç duyduğunuzda isteğe bağlı +1 ek ipucu seçeneği sunulur.</p>
+        </details>
+
+        <details>
+          <summary>İnternet olmadan tamamen çevrimdışı oynayabilir miyim?</summary>
+          <p>Evet! Fruitopia %100 çevrimdışı çalışır. Tüm bulmacalar, ilerlemeniz, en iyi süreleriniz, günlük seriniz ve tercihleriniz cihazınızda yerel olarak saklanır.</p>
+        </details>
+
+        <details>
+          <summary>Koyu Mod veya dil (Türkçe / English) nasıl değiştirilir?</summary>
+          <p>Alt çubuktan <strong>İstatistik</strong> sekmesine geçip <strong>Görünüm ve Dil</strong> bölümünden Sistem, Açık (Sıcak Fildişi) veya Koyu (Derin Espresso) temayı ve Türkçe / English dilini anında seçebilirsiniz.</p>
+        </details>
+
+        <details>
+          <summary>Reklam takibi tercihlerimi nasıl yönetebilirim?</summary>
+          <p>Takip izninizi dilediğiniz zaman <strong>iOS Ayarlar &rarr; Gizlilik ve Güvenlik &rarr; Takip</strong> ekranından güncelleyebilirsiniz. Ayrıntılar için <a href="./privacy-policy.html?lang=tr">Gizlilik Politikası</a> sayfamızı okuyabilirsiniz.</p>
+        </details>
+      </section>
+
+      <section class="card">
+        <h2>Doğrudan İletişim</h2>
+        <p>Bir hata bildirmek veya yeni bulmaca paketleri için öneri paylaşmak isterseniz <a href="mailto:erdem@skyhancloud.com">erdem@skyhancloud.com</a> adresine iPhone modeliniz, iOS sürümünüz ve seviye numarasıyla yazabilirsiniz. Genellikle 24–48 iş saati içinde yanıt veriyoruz.</p>
+      </section>
+    </main>
+
+    <footer>
+      <span>&copy; 2026 Fruitopia &middot; Erdem App Factory</span>
+      <span><a href="./privacy-policy.html">Privacy Policy / Gizlilik Politikası</a></span>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      const btnEn = document.getElementById('btn-lang-en');
+      const btnTr = document.getElementById('btn-lang-tr');
+      const secEn = document.querySelector('[data-lang-section="en"]');
+      const secTr = document.querySelector('[data-lang-section="tr"]');
+
+      function setLang(lang) {
+        const isTr = lang === 'tr';
+        document.documentElement.lang = isTr ? 'tr' : 'en';
+        document.title = isTr ? 'Destek — Fruitopia' : 'Support — Fruitopia';
+        secEn.hidden = isTr;
+        secTr.hidden = !isTr;
+        btnEn.setAttribute('aria-pressed', String(!isTr));
+        btnTr.setAttribute('aria-pressed', String(isTr));
+      }
+
+      btnEn.addEventListener('click', () => setLang('en'));
+      btnTr.addEventListener('click', () => setLang('tr'));
+
+      const params = new URLSearchParams(window.location.search);
+      const qLang = params.get('lang');
+      if (qLang === 'tr' || (!qLang && (navigator.language || '').toLowerCase().startsWith('tr'))) {
+        setLang('tr');
+      }
+    })();
+  </script>
+</body>
+</html>

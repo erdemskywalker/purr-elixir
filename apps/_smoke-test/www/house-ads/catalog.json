@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "updatedAt": "2026-11-25",
+  "fallbackDefault": {
+    "id": "app-factory-default",
+    "badge": {
+      "en": "Recommended",
+      "tr": "Önerilen"
+    },
+    "title": {
+      "en": "Explore Our Indie iOS Tools",
+      "tr": "Bağımsız iOS Araçlarımızı Keşfet"
+    },
+    "subtitle": {
+      "en": "Clean, offline-first utilities crafted for daily focus.",
+      "tr": "Günlük odak için sade ve çevrimdışı çalışan araçlar."
+    },
+    "cta": {
+      "en": "View",
+      "tr": "İncele"
+    },
+    "accentColor": "#007AFF",
+    "iconSymbol": "✦",
+    "url": "https://apps.apple.com"
+  },
+  "apps": []
+}

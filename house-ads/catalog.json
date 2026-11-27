@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "updatedAt": "2026-11-25",
+  "fallbackDefault": {
+    "id": "app-factory-default",
+    "badge": {
+      "en": "Fruitopia Tip",
+      "tr": "Oyun İpucu"
+    },
+    "title": {
+      "en": "Daily 10×10 Quest & Endless Mode",
+      "tr": "Günlük 10×10 Görev ve Sonsuz Mod"
+    },
+    "subtitle": {
+      "en": "Handcrafted offline logic games by Erdem Indie Studio.",
+      "tr": "Erdem Indie Studio tarafından üretilen çevrimdışı mantık oyunları."
+    },
+    "cta": {
+      "en": "Explore",
+      "tr": "Keşfet"
+    },
+    "accentColor": "#1B7A3B",
+    "iconSymbol": "🍏",
+    "url": "app://levels"
+  },
+  "apps": [
+    {
+      "id": "com.erdem.fruitopia",
+      "badge": {
+        "en": "Recommended",
+        "tr": "Önerilen"
+      },
+      "title": {
+        "en": "Fruitopia — 10×10 Fruit Puzzle",
+        "tr": "Fruitopia — 10×10 Meyve Sudokusu"
+      },
+      "subtitle": {
+        "en": "90 pure-logic boards + Endless Mode. 100% offline.",
+        "tr": "90 saf mantık tahtası + Sonsuz Mod. %100 çevrimdışı."
+      },
+      "cta": {
+        "en": "Play",
+        "tr": "Oyna"
+      },
+      "accentColor": "#D9383E",
+      "iconSymbol": "🍏",
+      "url": "https://apps.apple.com"
+    }
+  ]
+}

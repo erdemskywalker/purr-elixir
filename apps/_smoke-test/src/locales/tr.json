@@ -1,0 +1,19 @@
+{
+  "app.name": "Çekirdek Motor",
+  "tab.home": "Özet",
+  "tab.settings": "Ayarlar",
+  "home.title": "Çekirdek Motor",
+  "home.kicker": "GERÇEK SQLITE DURUMU",
+  "home.stat_label": "{{verified}} / {{total}} Doğrulandı",
+  "home.hero_desc": "Aşağıdaki tüm kayıtlar canlı WASM SQLite üzerinden okunur.",
+  "home.section_checks": "Aktif Motor Modülleri",
+  "home.add_btn": "SQLite Kaydı Ekle",
+  "home.sheet_title": "Yeni SQLite Kaydı",
+  "home.input_placeholder": "Modül notu girin...",
+  "home.saved_toast": "SQLite veritabanına kaydedildi",
+  "settings.title": "Ayarlar",
+  "settings.section_prefs": "Tercihler",
+  "settings.section_engine": "Çalışma Tanıları",
+  "settings.db_mode": "Veritabanı Motoru",
+  "settings.ad_mode": "AdSlot Modu"
+}

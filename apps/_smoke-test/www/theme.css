@@ -1,0 +1,51 @@
+/* Smoke Test Unique Theme Tokens (Deep Indigo/Teal iOS Palette) */
+:root {
+  --accent: #0d9488;
+  --accent-soft: rgba(13, 148, 136, 0.14);
+  --accent-contrast: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --accent: #2dd4bf;
+    --accent-soft: rgba(45, 212, 191, 0.2);
+    --accent-contrast: #042f2e;
+  }
+}
+
+:root[data-theme="dark"] {
+  --accent: #2dd4bf;
+  --accent-soft: rgba(45, 212, 191, 0.2);
+  --accent-contrast: #042f2e;
+}
+
+.smoke-hero {
+  background: linear-gradient(135deg, var(--accent) 0%, #0f766e 100%);
+  color: #ffffff;
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  margin-bottom: var(--space-4);
+  box-shadow: 0 10px 26px rgba(13, 148, 136, 0.24);
+}
+
+.smoke-hero-kicker {
+  font-size: var(--text-caption-1);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.86;
+  margin-bottom: 6px;
+}
+
+.smoke-hero-stat {
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin: 0 0 6px;
+}
+
+.smoke-hero-desc {
+  margin: 0;
+  font-size: var(--text-subhead);
+  opacity: 0.92;
+}
